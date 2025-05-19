@@ -1,0 +1,191 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Health House - Blog Detail</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Health, Medical Blog, Online Consultation" name="keywords">
+    <meta content="Explore health topics and expert insights on Health House Blog." name="description">
+
+    <!-- Favicon -->
+    <link href="{% static 'img/favicon.ico' %}" rel="icon">
+
+    <!-- Fonts and Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries -->
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+<!-- Navbar Start -->
+<div class="container-fluid position-relative p-0">
+    <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+        <a href="{% url 'index' %}" class="navbar-brand">
+            <h1 class="m-0"><i class="fa fa-heartbeat me-2"></i>Health House</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a href="{% url 'index' %}" class="nav-item nav-link">Home</a>
+                <a href="{% url 'about' %}" class="nav-item nav-link">About</a>
+                <a href="{% url 'services' %}" class="nav-item nav-link">Services</a>
+                <a href="{% url 'blog' %}" class="nav-item nav-link active">Blog</a>
+                <a href="{% url 'contact' %}" class="nav-item nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+</div>
+<!-- Navbar End -->
+
+<!-- Header -->
+<div class="container-fluid bg-primary py-5 mb-5">
+    <div class="container text-center py-5">
+        <h1 class="display-4 text-white">Health Blog Detail</h1>
+        <a href="{% url 'index' %}" class="text-white">Home</a>
+        <span class="text-white mx-2">/</span>
+        <span class="text-white">Blog Detail</span>
+    </div>
+</div>
+
+<!-- Blog Detail Start -->
+<div class="container py-5">
+    <div class="row g-5">
+        <div class="col-lg-8">
+            <img class="img-fluid rounded mb-4" src="{% static 'img/blog-1.jpg' %}" alt="">
+            <h2 class="mb-4">5 Ways to Improve Your Health With Online Consultations</h2>
+            <p>Online health consultations are transforming the way patients access care. From the comfort of your home, you can now speak with certified medical professionals, get prescriptions, and even referrals.</p>
+            <p>Health House makes this process seamless, secure, and affordable. Whether you're managing a chronic condition or seeking quick advice, our platform is built for ease and speed.</p>
+
+            <h4 class="mt-5">Benefits of Online Health Consultations</h4>
+            <ul>
+                <li>24/7 access to certified doctors</li>
+                <li>No travel or waiting rooms</li>
+                <li>Digital prescriptions sent instantly</li>
+                <li>Privacy and comfort from home</li>
+            </ul>
+
+            <p>Start your journey with Health House today and experience the next level of patient care.</p>
+
+            <!-- Comments -->
+            <div class="mt-5">
+                <h4>3 Comments</h4>
+                <div class="border-top pt-4">
+                    <div class="d-flex mb-3">
+                        <img class="rounded-circle" src="{% static 'img/user.jpg' %}" style="width: 45px; height: 45px;" alt="">
+                        <div class="ps-3">
+                            <h6 class="mb-1">Mary Jones <small class="text-muted">– Jan 1, 2025</small></h6>
+                            <p>Health House is incredibly convenient. I had a consultation while stuck at home with flu symptoms. Highly recommend!</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-3">
+                        <img class="rounded-circle" src="{% static 'img/user.jpg' %}" style="width: 45px; height: 45px;" alt="">
+                        <div class="ps-3">
+                            <h6 class="mb-1">David Kings <small class="text-muted">– Jan 3, 2025</small></h6>
+                            <p>My family used this platform during the holidays. We consulted a pediatrician in less than 10 minutes!</p>
+                        </div>
+                    </div>
+                    <div class="d-flex ms-4 mb-3">
+                        <img class="rounded-circle" src="{% static 'img/user.jpg' %}" style="width: 45px; height: 45px;" alt="">
+                        <div class="ps-3">
+                            <h6 class="mb-1">Sarah Hope <small class="text-muted">– Jan 4, 2025</small></h6>
+                            <p>Clean, fast, and reliable — this is what future healthcare looks like.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comment Form -->
+            <div class="bg-light rounded p-4 mt-5">
+                <h4>Leave a Comment</h4>
+                <form>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="col-12">
+                            <textarea class="form-control" rows="5" placeholder="Write your comment..."></textarea>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary w-100" type="submit">Post Comment</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-lg-4">
+            <div class="mb-4">
+                <h4 class="mb-3">Categories</h4>
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="#">Wellness</a></li>
+                    <li class="list-group-item"><a href="#">Nutrition</a></li>
+                    <li class="list-group-item"><a href="#">Mental Health</a></li>
+                    <li class="list-group-item"><a href="#">Chronic Care</a></li>
+                </ul>
+            </div>
+
+            <div class="mb-4">
+                <h4 class="mb-3">Recent Posts</h4>
+                <div class="d-flex mb-3">
+                    <img src="{% static 'img/blog-1.jpg' %}" class="rounded" style="width: 100px; height: 100px; object-fit: cover;" alt="">
+                    <div class="ps-3">
+                        <a href="{% url 'detail' %}" class="h6">5 Signs You Need to See a Doctor Online</a>
+                    </div>
+                </div>
+                <div class="d-flex mb-3">
+                    <img src="{% static 'img/blog-2.jpg' %}" class="rounded" style="width: 100px; height: 100px; object-fit: cover;" alt="">
+                    <div class="ps-3">
+                        <a href="{% url 'detail' %}" class="h6">How Health House Keeps You Safe & Connected</a>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="mb-3">Tags</h4>
+                <div class="d-flex flex-wrap gap-2">
+                    <a href="#" class="btn btn-outline-secondary btn-sm">Consultation</a>
+                    <a href="#" class="btn btn-outline-secondary btn-sm">Telemedicine</a>
+                    <a href="#" class="btn btn-outline-secondary btn-sm">Health Tips</a>
+                    <a href="#" class="btn btn-outline-secondary btn-sm">Doctors</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Blog Detail End -->
+
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-light py-4">
+    <div class="container text-center">
+        <p class="mb-0">&copy;2025 made by chris. All Rights Reserved.</p>
+    </div>
+</div>
+<!-- Footer End -->
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="{% static 'lib/wow/wow.min.js' %}"></script>
+<script src="{% static 'lib/easing/easing.min.js' %}"></script>
+<script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+<script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

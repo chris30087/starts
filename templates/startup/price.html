@@ -1,0 +1,141 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Health House - Pricing Plans</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Health House pricing, consultation cost, medical subscription" name="keywords">
+    <meta content="Choose the right Health House plan for your medical consultation and care needs." name="description">
+
+    <link href="{% static 'img/favicon.ico' %}" rel="icon">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries -->
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+<!-- Navbar Start -->
+<div class="container-fluid position-relative p-0">
+    <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3">
+        <a href="{% url 'index' %}" class="navbar-brand">
+            <h1 class="m-0"><i class="fa fa-heartbeat me-2"></i>Health House</h1>
+        </a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a href="{% url 'index' %}" class="nav-item nav-link">Home</a>
+                <a href="{% url 'about' %}" class="nav-item nav-link">About</a>
+                <a href="{% url 'services' %}" class="nav-item nav-link">Services</a>
+                <a href="{% url 'blog' %}" class="nav-item nav-link">Blog</a>
+                <a href="{% url 'contact' %}" class="nav-item nav-link">Contact</a>
+            </div>
+            <a href="{% url 'quote' %}" class="btn btn-primary py-2 px-4 ms-3">Get a Quote</a>
+        </div>
+    </nav>
+</div>
+<!-- Navbar End -->
+
+<!-- Page Header -->
+<div class="container-fluid bg-primary py-5">
+    <div class="container text-center text-white">
+        <h1 class="display-4">Pricing Plans</h1>
+        <a href="{% url 'index' %}" class="text-white">Home</a>
+        <span class="text-white mx-2">/</span>
+        <span>Pricing</span>
+    </div>
+</div>
+
+<!-- Pricing Section -->
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h5 class="text-primary text-uppercase">Our Plans</h5>
+            <h1>Choose The Right Plan For Your Health</h1>
+        </div>
+        <div class="row g-4">
+            <!-- Basic -->
+            <div class="col-lg-4">
+                <div class="bg-light text-center p-5 rounded">
+                    <h4 class="text-primary">Basic Plan</h4>
+                    <p class="text-muted">Ideal for quick consultations</p>
+                    <h1 class="display-5 my-3">$29<small class="fs-6">/month</small></h1>
+                    <ul class="list-unstyled mb-4">
+                        <li>✔ 2 Consultations/month</li>
+                        <li>✔ Prescription Support</li>
+                        <li>✘ 24/7 Access</li>
+                        <li>✘ Hospital Booking</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary px-4 py-2">Get Started</a>
+                </div>
+            </div>
+
+            <!-- Standard -->
+            <div class="col-lg-4">
+                <div class="bg-white text-center p-5 rounded shadow">
+                    <h4 class="text-primary">Standard Plan</h4>
+                    <p class="text-muted">Best for families and routine care</p>
+                    <h1 class="display-5 my-3">$59<small class="fs-6">/month</small></h1>
+                    <ul class="list-unstyled mb-4">
+                        <li>✔ 5 Consultations/month</li>
+                        <li>✔ 24/7 Doctor Chat</li>
+                        <li>✔ Prescription Delivery</li>
+                        <li>✘ Hospital Room Booking</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary px-4 py-2">Get Started</a>
+                </div>
+            </div>
+
+            <!-- Premium -->
+            <div class="col-lg-4">
+                <div class="bg-light text-center p-5 rounded">
+                    <h4 class="text-primary">Premium Plan</h4>
+                    <p class="text-muted">For full access and priority support</p>
+                    <h1 class="display-5 my-3">$99<small class="fs-6">/month</small></h1>
+                    <ul class="list-unstyled mb-4">
+                        <li>✔ Unlimited Consultations</li>
+                        <li>✔ 24/7 Doctor Access</li>
+                        <li>✔ Hospital Booking Included</li>
+                        <li>✔ Priority Support</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary px-4 py-2">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Quote CTA -->
+<div class="container-fluid bg-primary text-white py-5">
+    <div class="container text-center">
+        <h2>Need help deciding?</h2>
+        <p>Contact us to choose the best plan for your health journey.</p>
+        <a href="{% url 'contact' %}" class="btn btn-light px-4 py-2 mt-2">Contact Us</a>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="container-fluid bg-dark text-white text-center py-4">
+    <p class="mb-0">&copy; 2025 made by chris. All Rights Reserved.</p>
+</div>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="{% static 'lib/wow/wow.min.js' %}"></script>
+<script src="{% static 'lib/easing/easing.min.js' %}"></script>
+<script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+<script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Health House - Why Choose Us</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Health House features, medical support, online healthcare" name="keywords">
+    <meta content="Discover why Health House is a trusted name in online medical consultation and hospital services." name="description">
+
+    <link href="{% static 'img/favicon.ico' %}" rel="icon">
+
+    <!-- Fonts and Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries -->
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+            <a href="{% url 'index' %}" class="navbar-brand">
+                <h1 class="m-0"><i class="fa fa-heartbeat me-2"></i>Health House</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="{% url 'index' %}" class="nav-item nav-link">Home</a>
+                    <a href="{% url 'about' %}" class="nav-item nav-link">About</a>
+                    <a href="{% url 'services' %}" class="nav-item nav-link">Services</a>
+                    <a href="{% url 'blog' %}" class="nav-item nav-link">Blog</a>
+                    <a href="{% url 'contact' %}" class="nav-item nav-link">Contact</a>
+                </div>
+                <a href="{% url 'quote' %}" class="btn btn-primary py-2 px-4 ms-3">Get a Quote</a>
+            </div>
+        </nav>
+
+        <div class="container-fluid bg-primary py-5 bg-header">
+            <div class="row py-5">
+                <div class="col-12 text-center">
+                    <h1 class="display-4 text-white animated zoomIn">Our Features</h1>
+                    <a href="{% url 'index' %}" class="h5 text-white">Home</a>
+                    <i class="far fa-circle text-white px-2"></i>
+                    <span class="h5 text-white">Features</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Features Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-primary text-uppercase">Why Choose Us</h5>
+                <h1 class="mb-0">We Are Committed to Your Health and Well-being</h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <div class="row g-5">
+                        <div class="col-12 wow zoomIn" data-wow-delay="0.2s">
+                            <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                <i class="fa fa-stethoscope text-white"></i>
+                            </div>
+                            <h4>Trusted Medical Experts</h4>
+                            <p class="mb-0">Our platform connects you with certified professionals in every medical specialty.</p>
+                        </div>
+                        <div class="col-12 wow zoomIn" data-wow-delay="0.6s">
+                            <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                <i class="fa fa-award text-white"></i>
+                            </div>
+                            <h4>Award-Winning Platform</h4>
+                            <p class="mb-0">Recognized for innovation and service in digital health transformation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.9s">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100 rounded" src="{% static 'img/feature.jpg' %}" style="object-fit: cover;" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="row g-5">
+                        <div class="col-12 wow zoomIn" data-wow-delay="0.4s">
+                            <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                <i class="fa fa-user-md text-white"></i>
+                            </div>
+                            <h4>24/7 Medical Access</h4>
+                            <p class="mb-0">No more waiting. Get consultations anytime, anywhere—even during emergencies.</p>
+                        </div>
+                        <div class="col-12 wow zoomIn" data-wow-delay="0.8s">
+                            <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                <i class="fa fa-phone-alt text-white"></i>
+                            </div>
+                            <h4>Ongoing Patient Support</h4>
+                            <p class="mb-0">Our team is always ready to assist with questions, bookings, and follow-ups.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <!-- Features End -->
+
+    <!-- Vendors (optional, kept from original template) -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="bg-white">
+                <div class="owl-carousel vendor-carousel">
+                    <img src="{% static 'img/vendor-1.jpg' %}" alt="">
+                    <img src="{% static 'img/vendor-2.jpg' %}" alt="">
+                    <img src="{% static 'img/vendor-3.jpg' %}" alt="">
+                    <img src="{% static 'img/vendor-4.jpg' %}" alt="">
+                    <img src="{% static 'img/vendor-5.jpg' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light mt-5">
+        <div class="container text-center">
+            <p class="mb-0 py-3">&copy; 2025 made by chris. All Rights Reserved.</p>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'lib/wow/wow.min.js' %}"></script>
+    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+    <script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
+    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

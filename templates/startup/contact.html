@@ -1,0 +1,129 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Health House - Contact Us</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Contact Health House, Online Doctor, Consultation Booking" name="keywords">
+    <meta content="Get in touch with Health House for consultations, hospital bookings, or healthcare support." name="description">
+
+    <!-- Favicon -->
+    <link href="{% static 'img/favicon.ico' %}" rel="icon">
+
+    <!-- Google Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries -->
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Topbar -->
+    <div class="container-fluid bg-dark text-light py-2 px-5 d-none d-lg-block">
+        <div class="row">
+            <div class="col-lg-8">
+                <small><i class="fa fa-map-marker-alt me-2"></i>123 Health Street, Wellness City</small>
+                <small class="ms-3"><i class="fa fa-phone-alt me-2"></i>+012 345 6789</small>
+                <small class="ms-3"><i class="fa fa-envelope me-2"></i>contact@healthhouse.com</small>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+            <a href="{% url 'index' %}" class="navbar-brand">
+                <h1 class="m-0"><i class="fa fa-heartbeat me-2"></i>Health House</h1>
+            </a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto">
+                    <a href="{% url 'index' %}" class="nav-item nav-link">Home</a>
+                    <a href="{% url 'about' %}" class="nav-item nav-link">About</a>
+                    <a href="{% url 'services' %}" class="nav-item nav-link">Services</a>
+                    <a href="{% url 'blog' %}" class="nav-item nav-link">Blog</a>
+                    <a href="{% url 'contact' %}" class="nav-item nav-link active">Contact</a>
+                </div>
+                <a href="{% url 'quote' %}" class="btn btn-primary ms-3">Book Consultation</a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Page Header -->
+    <div class="container-fluid bg-primary py-5 mb-5">
+        <div class="container text-center">
+            <h1 class="display-4 text-white">Contact Us</h1>
+            <p class="lead text-white">Need help? Our support team is here for you.</p>
+        </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h5 class="text-primary text-uppercase">Get in Touch</h5>
+            <h2>We're Always Ready to Help</h2>
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-6">
+                <form method="post" action="">
+                    {% csrf_token %}
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="name" placeholder="Your Name">
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="email" placeholder="Your Email">
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="subject" placeholder="Subject">
+                        <label for="subject">Subject</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                </form>
+            </div>
+            <div class="col-lg-6">
+                <iframe
+                    src="https://www.google.com/maps?q=Area+1,+Abuja,+Nigeria&output=embed"
+                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container-fluid bg-dark text-light mt-5 py-4 text-center">
+        <p class="mb-0">&copy;2025 made by chris. All Rights Reserved.</p>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'lib/wow/wow.min.js' %}"></script>
+    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
